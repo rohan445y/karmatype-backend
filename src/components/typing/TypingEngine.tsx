@@ -297,14 +297,14 @@ export function TypingEngine() {
     // Space or completed word
     if (val.endsWith(' ')) {
       const typedWord = val.trim();
-      const isWordCorrect = typedWord === targetWord;
+      const isWordCorrect = typedWord.toLowerCase() === targetWord.toLowerCase();
 
       playKeystrokeSound(!isWordCorrect);
 
-      // Track correct characters
+      // Track correct characters (case-insensitive)
       let correctInThisWord = 0;
       for (let i = 0; i < Math.min(typedWord.length, targetWord.length); i++) {
-        if (typedWord[i] === targetWord[i]) correctInThisWord++;
+        if (typedWord[i].toLowerCase() === targetWord[i].toLowerCase()) correctInThisWord++;
       }
 
       setCorrectTypedChars((prev) => prev + correctInThisWord + (isWordCorrect ? 1 : 0));
@@ -480,7 +480,7 @@ export function TypingEngine() {
                 const typedChar = inputVal[charIdx];
                 let charClass = 'text-zinc-400';
                 if (typedChar !== undefined) {
-                  charClass = typedChar === char ? 'text-purple-300 font-bold' : 'text-red-400 font-bold bg-red-950/50';
+                  charClass = typedChar.toLowerCase() === char.toLowerCase() ? 'text-purple-300 font-bold' : 'text-red-400 font-bold bg-red-950/50';
                 }
                 return (
                   <span key={charIdx} className={charClass}>
