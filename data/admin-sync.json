@@ -1,0 +1,231 @@
+{
+  "users": [
+    {
+      "id": "user-1785514849712",
+      "name": "Vezeta Sama",
+      "email": "regmimandip40@gmail.com",
+      "avatar": "",
+      "role": "user",
+      "isPremium": false,
+      "level": 1,
+      "xp": 0,
+      "coins": 0,
+      "streak": 0,
+      "lastActiveDate": "2026-07-31T16:20:49.712Z",
+      "referralCode": "VEZETA_SAMA-9711",
+      "totalTestsCompleted": 0,
+      "bestWpm": 0,
+      "avgWpm": 0,
+      "avgAccuracy": 0,
+      "country": "Nepal",
+      "joinedAt": "2026-07-31T16:20:49.712Z",
+      "username": "regmimandip40",
+      "membershipPlan": "Free",
+      "walletBalance": 0,
+      "status": "active",
+      "emailVerified": false,
+      "lastLogin": "2026-07-31T16:20:49.712Z",
+      "password": "regmimandip40"
+    },
+    {
+      "id": "admin-001",
+      "name": "Administrator",
+      "email": "admin@karmatype.com",
+      "avatar": "",
+      "role": "admin",
+      "isPremium": true,
+      "level": 1,
+      "xp": 0,
+      "coins": 0,
+      "streak": 0,
+      "lastActiveDate": "2026-08-01T06:15:04.424Z",
+      "referralCode": "ADMIN",
+      "totalTestsCompleted": 0,
+      "bestWpm": 0,
+      "avgWpm": 0,
+      "avgAccuracy": 0,
+      "country": "Nepal",
+      "joinedAt": "2026-07-31T16:14:38.400Z",
+      "username": "admin",
+      "membershipPlan": "Premium",
+      "walletBalance": 0,
+      "status": "active",
+      "emailVerified": true,
+      "lastLogin": "2026-08-01T06:15:04.424Z",
+      "password": "admin123"
+    },
+    {
+      "id": "user-1785514478358",
+      "name": "Persistent Auth User",
+      "email": "persistent.auth@example.com",
+      "avatar": "",
+      "role": "user",
+      "isPremium": false,
+      "level": 1,
+      "xp": 0,
+      "coins": 0,
+      "streak": 0,
+      "lastActiveDate": "2026-07-31T16:14:38.484Z",
+      "referralCode": "PERSISTENT_AUTH_USER-8357",
+      "totalTestsCompleted": 0,
+      "bestWpm": 0,
+      "avgWpm": 0,
+      "avgAccuracy": 0,
+      "country": "Nepal",
+      "joinedAt": "2026-07-31T16:14:38.358Z",
+      "username": "persistent.auth",
+      "membershipPlan": "Free",
+      "walletBalance": 0,
+      "status": "active",
+      "emailVerified": false,
+      "lastLogin": "2026-07-31T16:14:38.484Z",
+      "password": "secret123"
+    }
+  ],
+  "payouts": [
+    {
+      "id": "trx-1785515205351",
+      "requestId": "req-1785515205351",
+      "userId": "user-1785514849712",
+      "userName": "Vezeta Sama",
+      "userEmail": "regmimandip40@gmail.com",
+      "method": "esewa",
+      "paymentMethod": "esewa",
+      "accountDetails": "33432423",
+      "amountNpr": 20,
+      "coinsDeducted": 200,
+      "coinsUsed": 200,
+      "status": "approved",
+      "createdAt": "2026-07-31T16:26:45.351Z",
+      "adminNote": "Approved by Admin",
+      "transactionRef": "MANUAL-PAYOUT",
+      "transactionId": "MANUAL-PAYOUT",
+      "processedAt": "2026-08-01T06:15:39.632Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notice-1785564939632-d3cfp",
+      "type": "payout",
+      "message": "Payout approved for Vezeta Sama (20 NPR)",
+      "timestamp": "2026-08-01T06:15:39.632Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785564904425-ckote",
+      "type": "user",
+      "message": "New registration logged for Administrator (admin@karmatype.com)",
+      "timestamp": "2026-08-01T06:15:04.425Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785515205352-la1gd",
+      "type": "payout",
+      "message": "New payout request submitted by Vezeta Sama for Rs. 20",
+      "timestamp": "2026-07-31T16:26:45.352Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785514849713-f5oiz",
+      "type": "user",
+      "message": "New registration logged for Vezeta Sama (regmimandip40@gmail.com)",
+      "timestamp": "2026-07-31T16:20:49.713Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785514797360-00qeo",
+      "type": "user",
+      "message": "New registration logged for Administrator (admin@karmatype.com)",
+      "timestamp": "2026-07-31T16:19:57.360Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785514478484-1iit4",
+      "type": "user",
+      "message": "New registration logged for Persistent Auth User (persistent.auth@example.com)",
+      "timestamp": "2026-07-31T16:14:38.484Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785514478400-id2di",
+      "type": "user",
+      "message": "Seed admin account loaded.",
+      "timestamp": "2026-07-31T16:14:38.400Z",
+      "read": false
+    },
+    {
+      "id": "notice-1785514478359-b1ey8",
+      "type": "user",
+      "message": "New registration logged for Persistent Auth User (persistent.auth@example.com)",
+      "timestamp": "2026-07-31T16:14:38.359Z",
+      "read": false
+    }
+  ],
+  "logs": [
+    {
+      "id": "log-1785564939632-w0gen",
+      "action": "Admin Approval",
+      "userId": "user-1785514849712",
+      "adminId": "admin-001",
+      "timestamp": "2026-08-01T06:15:39.632Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785564904425-pwfmp",
+      "action": "Registration",
+      "userId": "admin-001",
+      "timestamp": "2026-08-01T06:15:04.425Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785515205352-d6ken",
+      "action": "Payout Request",
+      "userId": "user-1785514849712",
+      "timestamp": "2026-07-31T16:26:45.352Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785514849713-4n39o",
+      "action": "Registration",
+      "userId": "user-1785514849712",
+      "timestamp": "2026-07-31T16:20:49.713Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785514797360-bz0jm",
+      "action": "Registration",
+      "userId": "admin-001",
+      "timestamp": "2026-07-31T16:19:57.360Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785514478484-gfdng",
+      "action": "Registration",
+      "userId": "user-1785514478358",
+      "timestamp": "2026-07-31T16:14:38.484Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785514478400-mcze9",
+      "action": "Admin Seed",
+      "userId": "admin-001",
+      "timestamp": "2026-07-31T16:14:38.400Z",
+      "browser": "unknown",
+      "device": "desktop"
+    },
+    {
+      "id": "log-1785514478359-zon3w",
+      "action": "Registration",
+      "userId": "user-1785514478358",
+      "timestamp": "2026-07-31T16:14:38.359Z",
+      "browser": "unknown",
+      "device": "desktop"
+    }
+  ]
+}
