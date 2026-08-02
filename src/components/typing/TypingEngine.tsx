@@ -89,13 +89,21 @@ export function TypingEngine() {
   const triggerMonetagAd = useCallback(() => {
     if (typeof window !== 'undefined') {
       try {
-        const existing = document.querySelector('script[data-zone="11485090"]');
-        if (!existing) {
+        // Zone 11485090 Rich / Onclick tag
+        if (!document.querySelector('script[data-zone="11485090"]')) {
           (function (s: HTMLScriptElement) {
             s.dataset.zone = '11485090';
             s.src = 'https://al5sm.com/tag.min.js';
             ([document.documentElement, document.body].filter(Boolean).pop())?.appendChild(s);
           })(document.createElement('script'));
+        }
+        // Zone 11485082 Push tag
+        if (!document.querySelector('script[src*="11485082"]')) {
+          const s = document.createElement('script');
+          s.src = 'https://5gvci.com/act/files/tag.min.js?z=11485082';
+          s.setAttribute('data-cfasync', 'false');
+          s.async = true;
+          document.head.appendChild(s);
         }
       } catch (err) {
         console.error('Monetag ad launch error:', err);
