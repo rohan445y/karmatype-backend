@@ -79,10 +79,29 @@ export function TypingEngine() {
 
   // Result state
   const [lastResult, setLastResult] = useState<TypingResult | null>(null);
+  const [completedSessionsCount, setCompletedSessionsCount] = useState<number>(0);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const startTimeRef = useRef<number | null>(null);
+
+  // Monetag Ad Launcher
+  const triggerMonetagAd = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      try {
+        const existing = document.querySelector('script[data-zone="11485090"]');
+        if (!existing) {
+          (function (s: HTMLScriptElement) {
+            s.dataset.zone = '11485090';
+            s.src = 'https://al5sm.com/tag.min.js';
+            ([document.documentElement, document.body].filter(Boolean).pop())?.appendChild(s);
+          })(document.createElement('script'));
+        }
+      } catch (err) {
+        console.error('Monetag ad launch error:', err);
+      }
+    }
+  }, []);
 
   // Mechanical switch audio synthesizer (Web Audio API)
   const playKeystrokeSound = useCallback((isError: boolean = false) => {
@@ -222,6 +241,14 @@ export function TypingEngine() {
     setLastResult(result);
     addTypingResult(result);
 
+    setCompletedSessionsCount((prev) => {
+      const nextCount = prev + 1;
+      if (nextCount >= 1) {
+        triggerMonetagAd();
+      }
+      return nextCount;
+    });
+
     if (antiCheatReport.isValid && calculatedWpm > 40) {
       confetti({
         particleCount: 80,
@@ -238,7 +265,8 @@ export function TypingEngine() {
     pasteAttempts,
     systemConfig,
     currentUser,
-    addTypingResult
+    addTypingResult,
+    triggerMonetagAd
   ]);
 
   const finishSessionRef = useRef(finishSession);
@@ -560,7 +588,12 @@ export function TypingEngine() {
             {/* Action Buttons */}
             <div className="flex items-center gap-3 pt-2">
               <button
-                onClick={resetEngine}
+                onClick={() => {
+                  if (completedSessionsCount >= 1) {
+                    triggerMonetagAd();
+                  }
+                  resetEngine();
+                }}
                 className="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-purple-600/20 flex items-center justify-center gap-2 text-sm"
               >
                 <RotateCcw className="w-4 h-4" /> Try Again
