@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   Timer,
   RotateCcw,
-  Flame,
   Sparkles,
   ShieldAlert,
   Code,
@@ -416,28 +415,6 @@ export function TypingEngine() {
           </button>
         </div>
       </div>
-
-      {/* Daily limit reached notification */}
-      {isDailyLimitReached && (
-        <div className="bg-amber-950/80 border border-amber-500/50 p-4 rounded-2xl flex items-center justify-between text-amber-200 text-xs">
-          <div className="flex items-center gap-3">
-            <Flame className="w-5 h-5 text-amber-400 flex-shrink-0" />
-            <div>
-              <span className="font-bold block">Daily Test Limit Reached ({testsTodayCount}/{maxDailyChances})</span>
-              You have used all {maxDailyChances} typing chances for today ({currentUser.isPremium ? '15/15 Premium' : '5/5 Free'}).
-              {!currentUser.isPremium && ' Upgrade to Premium for 15 tests per day!'}
-            </div>
-          </div>
-          {!currentUser.isPremium && (
-            <button
-              onClick={() => router.push('/premium')}
-              className="bg-amber-500 hover:bg-amber-400 text-black font-bold px-3 py-1.5 rounded-xl transition-all shadow-md text-xs whitespace-nowrap"
-            >
-              Get 15 Chances/Day
-            </button>
-          )}
-        </div>
-      )}
 
       {/* Anti-cheat Alert Warning if flagged */}
       {antiCheatWarning && (
