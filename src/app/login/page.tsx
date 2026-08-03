@@ -20,9 +20,9 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#09090B] text-white flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-xl">
         <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold">Login Required</h1>
+          <h1 className="text-3xl sm:text-4xl font-extrabold">Sign Up / Login</h1>
           <p className="mt-3 text-sm text-zinc-400">
-            You need to sign in or create an account before you can start typing and earn Karma Coins.
+            Create an account or sign in to start typing and earn Karma Coins.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function LoginPage() {
             setIsOpen(false);
             router.replace('/');
           }}
-          initialMode="login"
+          initialMode="register"
         />
       </div>
     </div>

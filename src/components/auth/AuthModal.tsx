@@ -20,9 +20,15 @@ interface AuthModalProps {
   initialMode?: 'login' | 'register';
 }
 
-export function AuthModal({ isOpen, onClose, initialMode = 'login' }: AuthModalProps) {
+export function AuthModal({ isOpen, onClose, initialMode = 'register' }: AuthModalProps) {
   const { setCurrentUser, addRegisteredUser } = useAppStore();
   const [mode, setMode] = useState<'login' | 'register'>(initialMode);
+
+  React.useEffect(() => {
+    if (isOpen) {
+      setMode(initialMode);
+    }
+  }, [initialMode, isOpen]);
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

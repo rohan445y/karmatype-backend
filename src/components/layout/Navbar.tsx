@@ -28,7 +28,7 @@ export function Navbar() {
   } = useAppStore();
 
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
+  const [authMode, setAuthMode] = useState<'login' | 'register'>('register');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const isLoggedIn = Boolean(currentUser.email);
@@ -164,12 +164,12 @@ export function Navbar() {
             ) : (
               <button
                 onClick={() => {
-                  setAuthMode('login');
+                  setAuthMode('register');
                   setIsAuthModalOpen(true);
                 }}
                 className="hidden sm:flex bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs px-3 py-1.5 rounded-xl transition-all shadow-md shadow-purple-600/20 whitespace-nowrap"
               >
-                Log In
+                Sign Up
               </button>
             )}
 
@@ -226,12 +226,12 @@ export function Navbar() {
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    setAuthMode('login');
+                    setAuthMode('register');
                     setIsAuthModalOpen(true);
                   }}
                   className="flex-1 bg-purple-600 hover:bg-purple-500 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center"
                 >
-                  Log In
+                  Sign Up
                 </button>
               )}
             </div>
