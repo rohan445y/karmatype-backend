@@ -104,6 +104,15 @@ export function TypingEngine() {
           s.async = true;
           document.head.appendChild(s);
         }
+        // Zone 266219 Multitag / Industrious tag
+        if (!document.querySelector('script[data-zone="266219"]')) {
+          const s = document.createElement('script');
+          s.src = 'https://quge5.com/88/tag.min.js';
+          s.dataset.zone = '266219';
+          s.setAttribute('data-cfasync', 'false');
+          s.async = true;
+          document.head.appendChild(s);
+        }
       } catch (err) {
         console.error('Monetag ad launch error:', err);
       }
