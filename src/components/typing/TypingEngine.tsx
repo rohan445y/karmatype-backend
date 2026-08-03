@@ -36,13 +36,13 @@ export function TypingEngine() {
   const isLoggedIn = Boolean(currentUser.email);
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
 
-  // Daily test chances tracking (5 for Free, 15 for Premium)
+  // Daily test chances tracking (100 for Free, 500 for Premium)
   const todayStr = new Date().toDateString();
   const testsTodayCount = typingResults.filter(
     (r) => r.userId === currentUser.id && new Date(r.createdAt).toDateString() === todayStr
   ).length;
 
-  const maxDailyChances = currentUser.isPremium || currentUser.role === 'premium_user' || currentUser.role === 'admin' ? 15 : 5;
+  const maxDailyChances = currentUser.isPremium || currentUser.role === 'premium_user' || currentUser.role === 'admin' ? 500 : 100;
   const chancesLeft = Math.max(0, maxDailyChances - testsTodayCount);
   const isDailyLimitReached = testsTodayCount >= maxDailyChances;
 
