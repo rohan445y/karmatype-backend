@@ -4,6 +4,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ThemeApplier } from '@/components/layout/ThemeApplier';
 import { AppProvider } from '@/lib/store';
+import { AdScripts } from '@/components/layout/AdScripts';
 
 export const metadata: Metadata = {
   title: 'Karma Type - Improve Your Typing. Earn Rewards.',
@@ -25,8 +26,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <meta name="monetag" content="440f295d90f97d764ffc8246c3b1ee0c" />
-        <script src="https://5gvci.com/act/files/tag.min.js?z=11485082" data-cfasync="false" async></script>
-        <script src="https://quge5.com/88/tag.min.js" data-zone="266219" async data-cfasync="false"></script>
+        <AdScripts />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />

@@ -87,6 +87,9 @@ export function TypingEngine() {
   // Monetag Ad Launcher
   const triggerMonetagAd = useCallback(() => {
     if (typeof window !== 'undefined') {
+      if (window.location.pathname.includes('/login') || window.location.pathname.includes('/signin') || window.location.pathname.includes('/register')) {
+        return;
+      }
       try {
         // Zone 11485090 Rich / Onclick tag
         if (!document.querySelector('script[data-zone="11485090"]')) {
